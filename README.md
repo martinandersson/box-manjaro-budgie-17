@@ -167,6 +167,7 @@ note down a few version numbers (for the box description).
 - Budgie desktop: `budgie-desktop --version`
 - Manjaro: `lsb_release -r`
 - Linux kernel: `uname -r`
+- Guest Additions: `sudo VBoxService --version`
 
 Notes:
 
