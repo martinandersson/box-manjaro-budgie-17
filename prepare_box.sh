@@ -9,7 +9,7 @@
 # installed automagically in the first command executed by this script. I.e., no
 # need to bother with the Guest Additions explicitly.
 # 
-# Last edit: 2017-12-03
+# Last edit: 2017-12-05
 
 
 
@@ -64,9 +64,18 @@ cat /dev/null > /home/vagrant/.bash_history
 cat /dev/null > /root/.bash_history
 
 # Fill empty space with zeroes
+set -e
+set -x
+
+set +e
+# This is supposed to crash with an error message:
+#   "dd: error writing 'zerofile': No space left on device"
 dd if=/dev/zero of=zerofile bs=1M
+set -e
+
 rm -f zerofile
 sync
 
+set +x
 echo 'All done. Shutdown and package the box!'
 history -c    # <-- clear this sessions's bash history
