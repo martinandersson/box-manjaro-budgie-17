@@ -59,7 +59,7 @@ Notes:
 
 - Be wary that the usual fix for VirtualBox issues related to graphics is to
   disable 3D acceleration =)
-- 2D video acceleration is for Windows guests only <sup>[[source][6]]</sup>.
+- 2D video acceleration is for Windows guests only <sup>[[source][5]]</sup>.
 - No need to fiddle with the video memory; we shall invoke a bit of command line
   voodoo in the next step to bump it all the way to 256 MB - the GUI window
   pictured below only allows 128 MB.
@@ -80,7 +80,7 @@ Notes:
 
 ### Install OS
 
-Mount the OS installation's ISO file (grab it [here][5]). You do that by
+Mount the OS installation's ISO file (grab it [here][6]). You do that by
 clicking on the little CD icon to the right in the next picture. Then select
 "Choose Virtual Optical Disk File...".
 
@@ -180,8 +180,8 @@ Notes:
 [2]: https://app.vagrantup.com/pristine/boxes/manjaro-budgie-17
 [3]: https://www.vagrantup.com/
 [4]: https://www.virtualbox.org/wiki/Downloads
-[5]: https://manjaro.org/community-editions/
-[6]: https://www.virtualbox.org/manual/ch04.html#guestadd-2d
+[5]: https://www.virtualbox.org/manual/ch04.html#guestadd-2d
+[6]: https://manjaro.org/community-editions/
 [7]: https://github.com/martinanderssondotcom/box-manjaro-budgie-17/blob/master/Vagrantfile
 [8]: https://app.vagrantup.com/boxes/new
 
