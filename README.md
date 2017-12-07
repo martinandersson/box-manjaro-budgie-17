@@ -19,9 +19,9 @@ get a Virtual Machine up and running with Manjaro Budgie 17 is:
     vagrant up
 
 <sub><sup>1</sup> The semantical concept captured here is elsewhere described as
-a "minimal" and/or "base" box. I refrain from using either term since 3 GB with
-a full office suite installed et cetera is hardly "minimal" nor am I convinced
-all use-cases of this barebones box is to derive yet another box for
+a "minimal" and/or "base" box. I refrain from using either term since 1.8 GB
+with a full office suite installed et cetera is hardly "minimal" nor am I
+convinced all use-cases of this barebones box is to derive yet another box for
 distribution as implied by the word "base". We are building a box. Period.</sub>
 
 ## Steps to reproduce the distributed box
