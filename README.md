@@ -16,7 +16,7 @@ with the Extension Pack, then, in theory, all you should have to do in order to
 get a Virtual Machine up and running with Manjaro Budgie 17 is:
 
     vagrant init pristine/manjaro-budgie-17
-    vagrant up 
+    vagrant up
 
 <sub><sup>1</sup> The semantical concept captured here is elsewhere described as
 a "minimal" and/or "base" box. I refrain from using either term since 3 GB with
