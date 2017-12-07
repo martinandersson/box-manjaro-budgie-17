@@ -189,7 +189,7 @@ Notes:
 [img-02]: screenshots/02-vb-create-vmdk-disk.png
 [img-03]: screenshots/03-vb-bidirectional-clipboard.png
 [img-04]: screenshots/04-vb-disable-floppy-boot.png
-[img-05]: screenshots/05-vd-enable-3d.png
+[img-05]: screenshots/05-vb-enable-3d.png
 [img-06]: screenshots/06-vb-mount-manjaro-iso.png
 
 [img-07]: screenshots/07-os-boot-menu.png
