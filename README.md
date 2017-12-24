@@ -104,7 +104,8 @@ Click on "Launch installer".
 
 Note:
 
-- I need to expand my GUI vertically in order to see the button.
+- I need to expand my GUI vertically in order to see the "Launch installer"
+  button.
 
 ![Welcome to Manjaro!][img-08]
 
