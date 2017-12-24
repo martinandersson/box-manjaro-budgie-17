@@ -135,9 +135,7 @@ _Shut down_ the machine and unmount the installation medium.
 
 ### Prepare the box
 
-Boot and log in.
-
-Open a terminal and type in:
+Boot. Open a terminal and type in:
 
     wget https://raw.githubusercontent.com/martinanderssondotcom/box-manjaro-budgie-17/master/prepare_box.sh
     sudo sh prepare_box.sh
