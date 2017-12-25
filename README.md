@@ -26,6 +26,12 @@ distribution as implied by the word "base". We are building a box. Period.</sub>
 
 ## Steps to reproduce the distributed box
 
+1. [Create Virtual Machine](#create-virtual-machine)
+1. [Install OS](#install-os)
+1. [Prepare the box](#prepare-the-box)
+1. [Package the box](#package-the-box)
+1. [Test the box](#test-the-box)
+
 ### Create Virtual Machine
 
 Create a new VM instance. Name it `manjaro-budgie-17`. Select type `Linux`,
@@ -137,8 +143,8 @@ _Shut down_ the machine and unmount the installation medium.
 
 Boot. Open a terminal and type in:
 
-    wget https://raw.githubusercontent.com/martinanderssondotcom/box-manjaro-budgie-17/master/prepare_box.sh
-    sudo sh prepare_box.sh
+    wget https://raw.githubusercontent.com/martinanderssondotcom/box-manjaro-budgie-17/master/prepare_box_part1.sh
+    sudo sh prepare_box_part1.sh
 
 While the script is running, you might wanna make yourself useful and increase
 the system's audio volume to max.
@@ -149,14 +155,20 @@ the address bar. Make sure the the following two items are unchecked:
 - "Allow Firefox to send technical and interaction data to Mozilla"
 - "Allow Firefox to install and run studies"
 
+Follow [these instructions][7] and update the Linux kernel to the latest and greatest
+LTS version, I personally use the GUI app "Manjaro Settings Manager". Restart
+and remove the old Linux kernel.
+
 Lastly:
 
-    rm prepare_box.sh
+    wget https://raw.githubusercontent.com/martinanderssondotcom/box-manjaro-budgie-17/master/prepare_box_part2.sh
+    sudo sh prepare_box_part2.sh
+    rm prepare_box_part?.sh
     history -c
 
 ### Package the box
 
-Download [this Vagrantfile][7] and put it in your working directory. Then do:
+Download [this Vagrantfile][8] and put it in your working directory. Then do:
 
     vagrant package --base manjaro-budgie-17 --output manjaro-budgie-17.box --vagrantfile Vagrantfile
 
@@ -173,7 +185,16 @@ Notes:
 - If the machine is running, then Vagrant will attempt to shut it down before
   packaging starts.
 - Box description- and version is specified during the box-upload process on
-  [Vagrant's website][8].
+  [Vagrant's website][9].
+
+### Test the box
+
+    vagrant box add manjaro-budgie-17.box --name manjaro-budgie-17
+    mkdir test-vm
+    cd test-vm
+    vagrant init manjaro-budgie-17
+    vagrant up
+    vagrant box remove manjaro-budgie-17
 
 [1]: https://manjaro.org/
 [2]: https://app.vagrantup.com/pristine/boxes/manjaro-budgie-17
@@ -181,8 +202,9 @@ Notes:
 [4]: https://www.virtualbox.org/wiki/Downloads
 [5]: https://www.virtualbox.org/manual/ch04.html#guestadd-2d
 [6]: https://manjaro.org/community-editions/
-[7]: https://github.com/martinanderssondotcom/box-manjaro-budgie-17/blob/master/Vagrantfile
-[8]: https://app.vagrantup.com/boxes/new
+[7]: https://wiki.manjaro.org/index.php/Manjaro_Kernels
+[8]: https://github.com/martinanderssondotcom/box-manjaro-budgie-17/blob/master/Vagrantfile
+[9]: https://app.vagrantup.com/boxes/new
 
 [img-01]: screenshots/01-vb-create-vm.png
 [img-02]: screenshots/02-vb-create-vmdk-disk.png
