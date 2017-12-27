@@ -194,6 +194,7 @@ Notes:
     cd test-vm
     vagrant init manjaro-budgie-17
     vagrant up
+    vagrant destroy -f
     vagrant box remove manjaro-budgie-17
 
 [1]: https://manjaro.org/
