@@ -204,7 +204,7 @@ Notes:
 [5]: https://www.virtualbox.org/manual/ch04.html#guestadd-2d
 [6]: https://manjaro.org/community-editions/
 [7]: https://wiki.manjaro.org/index.php/Manjaro_Kernels
-[8]: https://github.com/martinanderssondotcom/box-manjaro-budgie-17/blob/master/Vagrantfile
+[8]: https://raw.githubusercontent.com/martinanderssondotcom/box-manjaro-budgie-17/master/Vagrantfile
 [9]: https://app.vagrantup.com/boxes/new
 
 [img-01]: screenshots/01-vb-create-vm.png
